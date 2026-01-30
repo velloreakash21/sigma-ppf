@@ -10,63 +10,257 @@
         margin: 0;
         padding: 0;
       }
-      /* Custom loading screen */
-      .loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #0a0a0a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        z-index: 9999;
-      }
-      .loading-screen.hidden {
-        display: none;
-      }
-      .loading-logo {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 24px;
-      }
-      .loading-text {
-        color: #ffffff;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size: 18px;
-        margin-bottom: 16px;
-      }
-      .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgba(211, 47, 47, 0.2);
-        border-top-color: #D32F2F;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
     </style>
   </head>
   <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loading">
-      <img src="/assets/brand/logo-red.jpg" alt="Sigma PPF" class="loading-logo" style="border-radius: 12px;" />
-      <div class="loading-text">Sigma PPF Content Manager</div>
-      <div class="loading-spinner"></div>
-    </div>
-
-    <!-- Decap CMS Script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      // Hide loading screen when CMS loads
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          document.getElementById('loading').classList.add('hidden');
-        }, 1000);
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'velloreakash21/sigma-ppf',
+            branch: 'main',
+            base_url: 'https://sigmappf-website.vercel.app',
+            auth_endpoint: '/api/auth'
+          },
+          media_folder: 'public/assets',
+          public_folder: '/assets',
+          site_url: 'https://sigmappf-website.vercel.app',
+          display_url: 'https://sigmappf-website.vercel.app',
+          logo_url: '/assets/brand/logo-red.jpg',
+          collections: [
+            {
+              name: 'settings',
+              label: 'Site Settings',
+              files: [
+                {
+                  name: 'global',
+                  label: 'Global Settings',
+                  file: 'content/settings/global.json',
+                  fields: [
+                    { name: 'siteTitle', label: 'Site Title', widget: 'string' },
+                    { name: 'tagline', label: 'Tagline', widget: 'string' },
+                    {
+                      name: 'contact',
+                      label: 'Contact Information',
+                      widget: 'object',
+                      fields: [
+                        { name: 'email', label: 'Email', widget: 'string' },
+                        { name: 'phone', label: 'Phone Number', widget: 'string', required: false },
+                        { name: 'address', label: 'Address', widget: 'string' },
+                        { name: 'instagram', label: 'Instagram Handle', widget: 'string' },
+                        { name: 'instagramUrl', label: 'Instagram URL', widget: 'string' }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'pages',
+              label: 'Pages',
+              files: [
+                {
+                  name: 'home',
+                  label: 'Home Page',
+                  file: 'content/pages/home.json',
+                  fields: [
+                    {
+                      name: 'hero',
+                      label: 'Hero Section',
+                      widget: 'object',
+                      fields: [
+                        { name: 'title', label: 'Title', widget: 'string' },
+                        { name: 'subtitle', label: 'Subtitle', widget: 'string' },
+                        { name: 'ctaText', label: 'CTA Button Text', widget: 'string' },
+                        { name: 'ctaLink', label: 'CTA Button Link', widget: 'string' }
+                      ]
+                    },
+                    {
+                      name: 'features',
+                      label: 'Features',
+                      widget: 'list',
+                      fields: [
+                        { name: 'title', label: 'Title', widget: 'string' },
+                        { name: 'description', label: 'Description', widget: 'text' },
+                        { name: 'icon', label: 'Icon Name', widget: 'string' }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'about',
+                  label: 'About Page',
+                  file: 'content/pages/about.json',
+                  fields: [
+                    { name: 'pageTitle', label: 'Page Title', widget: 'string' },
+                    { name: 'pageSubtitle', label: 'Page Subtitle', widget: 'string' },
+                    {
+                      name: 'stats',
+                      label: 'Statistics',
+                      widget: 'list',
+                      fields: [
+                        { name: 'value', label: 'Value', widget: 'string' },
+                        { name: 'label', label: 'Label', widget: 'string' }
+                      ]
+                    },
+                    { name: 'story', label: 'Company Story', widget: 'text' },
+                    { name: 'mission', label: 'Our Mission', widget: 'text' },
+                    { name: 'vision', label: 'Our Vision', widget: 'text' },
+                    {
+                      name: 'whyChooseUs',
+                      label: 'Why Choose Us',
+                      widget: 'list',
+                      fields: [
+                        { name: 'title', label: 'Title', widget: 'string' },
+                        { name: 'description', label: 'Description', widget: 'text' },
+                        { name: 'icon', label: 'Icon Name', widget: 'string' }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'contact',
+                  label: 'Contact Page',
+                  file: 'content/pages/contact.json',
+                  fields: [
+                    { name: 'pageTitle', label: 'Page Title', widget: 'string' },
+                    { name: 'pageSubtitle', label: 'Page Subtitle', widget: 'string' },
+                    {
+                      name: 'businessHours',
+                      label: 'Business Hours',
+                      widget: 'object',
+                      fields: [
+                        { name: 'weekdays', label: 'Weekdays', widget: 'string' },
+                        { name: 'weekend', label: 'Weekend', widget: 'string' }
+                      ]
+                    },
+                    { name: 'mapEmbedUrl', label: 'Google Maps Embed URL', widget: 'string' }
+                  ]
+                },
+                {
+                  name: 'e-warranty',
+                  label: 'E-Warranty Page',
+                  file: 'content/pages/e-warranty.json',
+                  fields: [
+                    { name: 'pageTitle', label: 'Page Title', widget: 'string' },
+                    { name: 'pageSubtitle', label: 'Page Subtitle', widget: 'string' },
+                    {
+                      name: 'benefits',
+                      label: 'Warranty Benefits',
+                      widget: 'list',
+                      fields: [
+                        { name: 'title', label: 'Title', widget: 'string' },
+                        { name: 'description', label: 'Description', widget: 'text' },
+                        { name: 'icon', label: 'Icon Name', widget: 'string' }
+                      ]
+                    },
+                    {
+                      name: 'whatsCovered',
+                      label: "What's Covered",
+                      widget: 'list',
+                      field: { name: 'item', label: 'Item', widget: 'string' }
+                    },
+                    {
+                      name: 'importantNotes',
+                      label: 'Important Notes',
+                      widget: 'list',
+                      field: { name: 'note', label: 'Note', widget: 'string' }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'ppf-products',
+              label: 'PPF Products',
+              folder: 'content/products/ppf',
+              create: true,
+              extension: 'json',
+              format: 'json',
+              slug: '{{slug}}',
+              identifier_field: 'name',
+              fields: [
+                { name: 'slug', label: 'URL Slug', widget: 'string' },
+                { name: 'name', label: 'Product Name', widget: 'string' },
+                { name: 'description', label: 'Description', widget: 'text' },
+                {
+                  name: 'features',
+                  label: 'Features',
+                  widget: 'list',
+                  field: { name: 'feature', label: 'Feature', widget: 'string' }
+                },
+                {
+                  name: 'specs',
+                  label: 'Specifications',
+                  widget: 'object',
+                  fields: [
+                    { name: 'exterior', label: 'Exterior Thickness', widget: 'string', default: '195 Micron' },
+                    { name: 'interior', label: 'Interior Thickness', widget: 'string', default: '140 Micron' }
+                  ]
+                },
+                { name: 'warranty', label: 'Warranty Period', widget: 'string', default: '7 Years' },
+                {
+                  name: 'images',
+                  label: 'Product Images',
+                  widget: 'list',
+                  field: { name: 'image', label: 'Image', widget: 'image' }
+                }
+              ]
+            },
+            {
+              name: 'other-products',
+              label: 'Other Products',
+              files: [
+                {
+                  name: 'window-films',
+                  label: 'Window Films',
+                  file: 'content/products/window-films.json',
+                  fields: [
+                    { name: 'slug', label: 'URL Slug', widget: 'string' },
+                    { name: 'name', label: 'Product Name', widget: 'string' },
+                    { name: 'description', label: 'Description', widget: 'text' },
+                    {
+                      name: 'features',
+                      label: 'Features',
+                      widget: 'list',
+                      field: { name: 'feature', label: 'Feature', widget: 'string' }
+                    },
+                    {
+                      name: 'images',
+                      label: 'Product Images',
+                      widget: 'list',
+                      field: { name: 'image', label: 'Image', widget: 'image' }
+                    }
+                  ]
+                },
+                {
+                  name: 'precut-edition',
+                  label: 'Precut Edition',
+                  file: 'content/products/precut-edition.json',
+                  fields: [
+                    { name: 'slug', label: 'URL Slug', widget: 'string' },
+                    { name: 'name', label: 'Product Name', widget: 'string' },
+                    { name: 'description', label: 'Description', widget: 'text' },
+                    {
+                      name: 'categories',
+                      label: 'Categories',
+                      widget: 'list',
+                      field: { name: 'category', label: 'Category', widget: 'string' }
+                    },
+                    {
+                      name: 'videos',
+                      label: 'Video URLs',
+                      widget: 'list',
+                      field: { name: 'video', label: 'Video Path', widget: 'string' }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       });
     </script>
   </body>
