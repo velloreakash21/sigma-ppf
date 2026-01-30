@@ -1,0 +1,9 @@
+{
+  "slug": "satin-matte",
+  "name": "Satin Matte PPF",
+  "description": "The perfect balance between gloss and matte, offering a unique satin finish with full protection.",
+  "features": ["Satin finish", "Self-healing", "Hydrophobic", "UV protection"],
+  "specs": {"exterior": "195 Micron", "interior": "140 Micron"},
+  "warranty": "7 Years",
+  "images": ["/assets/ppf/satin-matte/img1.jpg", "/assets/ppf/satin-matte/img2.jpg"]
+}

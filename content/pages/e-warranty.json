@@ -1,0 +1,24 @@
+{
+  "pageTitle": "E-Warranty Registration",
+  "pageSubtitle": "Register your Sigma PPF installation for comprehensive warranty coverage",
+  "benefits": [
+    {"title": "7-Year Coverage", "description": "Our comprehensive warranty covers manufacturing defects for 7 full years.", "icon": "Calendar"},
+    {"title": "Easy Claims", "description": "Simple online process for warranty claims and support.", "icon": "FileCheck"},
+    {"title": "Quick Processing", "description": "Fast turnaround times for all warranty-related requests.", "icon": "Zap"},
+    {"title": "Transferable", "description": "Warranty transfers with vehicle ownership for added resale value.", "icon": "ArrowRightLeft"}
+  ],
+  "whatsCovered": [
+    "Yellowing or discoloration",
+    "Cracking or peeling",
+    "Bubbling or blistering",
+    "Delamination from painted surfaces",
+    "Manufacturing defects"
+  ],
+  "importantNotes": [
+    "Warranty registration must be completed within 30 days of installation",
+    "Original purchase invoice required for claims",
+    "Installation must be performed by authorized detailers",
+    "Regular maintenance as per guidelines required",
+    "Physical damage and improper care not covered"
+  ]
+}

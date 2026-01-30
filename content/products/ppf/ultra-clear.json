@@ -1,0 +1,9 @@
+{
+  "slug": "ultra-clear",
+  "name": "Ultra Clear PPF",
+  "description": "Crystal clear protection that preserves your car's original color with invisible defense against scratches, chips, and environmental damage.",
+  "features": ["Self-healing technology", "UV protection", "Hydrophobic coating", "Anti-yellowing"],
+  "specs": {"exterior": "195 Micron", "interior": "140 Micron"},
+  "warranty": "7 Years",
+  "images": ["/assets/ppf/ultra-clear/img1.jpg", "/assets/ppf/ultra-clear/img2.jpg", "/assets/ppf/ultra-clear/img3.jpg"]
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "matte",
+  "name": "Matte PPF",
+  "description": "Transform your vehicle with a sophisticated matte finish that combines style with protection.",
+  "features": ["Satin matte finish", "Self-healing", "Anti-fingerprint", "UV protection"],
+  "specs": {"exterior": "195 Micron", "interior": "140 Micron"},
+  "warranty": "7 Years",
+  "images": ["/assets/ppf/matte/img1.jpg", "/assets/ppf/matte/img2.jpg"]
+}

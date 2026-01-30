@@ -1,0 +1,9 @@
+{
+  "slug": "gloss-black",
+  "name": "Gloss Black PPF",
+  "description": "Deep, lustrous black finish that adds a premium aesthetic while providing superior protection.",
+  "features": ["High gloss finish", "Self-healing", "UV protection", "Scratch resistant"],
+  "specs": {"exterior": "195 Micron", "interior": "140 Micron"},
+  "warranty": "7 Years",
+  "images": []
+}

@@ -1,0 +1,21 @@
+{
+  "pageTitle": "About Sigma PPF",
+  "pageSubtitle": "Protecting Your Investment Since Day One",
+  "stats": [
+    {"value": "7", "label": "Year Warranty"},
+    {"value": "195", "label": "Micron Exterior"},
+    {"value": "5", "label": "Layer Construction"},
+    {"value": "100%", "label": "Customer Satisfaction"}
+  ],
+  "story": "At Sigma PPF, we believe every vehicle deserves the highest level of protection. Founded with a passion for automotive excellence, we've dedicated ourselves to providing premium paint protection film solutions that preserve your car's beauty while defending against the elements.\n\nOur journey began with a simple mission: to offer car enthusiasts and everyday drivers alike access to professional-grade protection that was once reserved for luxury vehicles. Today, we're proud to be Hyderabad's trusted name in automotive paint protection.\n\nWith years of experience and countless satisfied customers, we've refined our craft to deliver flawless installations and unmatched customer service.",
+  "mission": "To provide superior automotive protection solutions that preserve your vehicle's appearance and value, using only the highest quality materials and expert installation techniques.",
+  "vision": "To be the most trusted name in automotive paint protection across India, known for our commitment to quality, innovation, and customer satisfaction.",
+  "whyChooseUs": [
+    {"title": "Premium Quality", "description": "We use only the finest PPF materials with proven durability.", "icon": "Award"},
+    {"title": "Expert Installation", "description": "Our trained technicians ensure flawless, bubble-free application.", "icon": "Wrench"},
+    {"title": "7-Year Warranty", "description": "Industry-leading warranty coverage for complete peace of mind.", "icon": "Shield"},
+    {"title": "Custom Solutions", "description": "Tailored protection packages to meet your specific needs.", "icon": "Settings"},
+    {"title": "Fast Turnaround", "description": "Efficient service without compromising on quality.", "icon": "Clock"},
+    {"title": "Competitive Pricing", "description": "Premium protection at fair, transparent prices.", "icon": "Tag"}
+  ]
+}

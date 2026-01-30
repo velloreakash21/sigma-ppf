@@ -1,0 +1,9 @@
+{
+  "slug": "colour-series",
+  "name": "Colour Series PPF",
+  "description": "Express your style with our vibrant colour series PPF, combining bold aesthetics with premium protection.",
+  "features": ["Multiple color options", "Self-healing", "UV protection", "Removable"],
+  "specs": {"exterior": "195 Micron", "interior": "140 Micron"},
+  "warranty": "7 Years",
+  "images": ["/assets/ppf/colour-series/lexus1.jpg", "/assets/ppf/colour-series/lexus2.jpg", "/assets/ppf/colour-series/lexus3.jpg", "/assets/ppf/colour-series/lexus4.jpg", "/assets/ppf/colour-series/lexus5.jpg", "/assets/ppf/colour-series/seltos1.jpg", "/assets/ppf/colour-series/seltos2.jpg"]
+}

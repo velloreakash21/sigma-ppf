@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "THE INVISIBLE ARMOUR YOUR CAR DESERVES",
+    "subtitle": "Premium paint protection film solutions with 7-year warranty",
+    "ctaText": "Explore Products",
+    "ctaLink": "/products"
+  },
+  "features": [
+    {"title": "Self-Healing", "description": "Minor scratches disappear with heat exposure, keeping your film looking new.", "icon": "Sparkles"},
+    {"title": "Hydrophobic", "description": "Water beads off effortlessly, making cleaning easier and protecting against water spots.", "icon": "Droplets"},
+    {"title": "UV Protection", "description": "Blocks harmful UV rays to prevent paint fading and interior damage.", "icon": "Sun"},
+    {"title": "Impact Resistance", "description": "Absorbs impacts from road debris, preventing chips and scratches.", "icon": "Shield"}
+  ]
+}
